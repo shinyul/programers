@@ -10,7 +10,6 @@ To improve develop skills
 - [ ] IS NULL
 - [ ] JOIN
 - [ ] String, Date
-- [ ] Day 7
 
 
 ## References
