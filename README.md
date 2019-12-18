@@ -4,7 +4,7 @@ To improve develop skills
 
 ## SQL 고득점 Kit
 
-- [ ] SELECT
+- [x] SELECT
 - [x] SUM, MAX, MIN
 - [ ] GROUP BY
 - [ ] IS NULL
