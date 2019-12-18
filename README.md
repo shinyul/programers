@@ -5,7 +5,7 @@ To improve develop skills
 ## SQL 고득점 Kit
 
 - [x] SELECT
-- [ ] SUM, MAX, MIN
+- [x] SUM, MAX, MIN
 - [ ] GROUP BY
 - [ ] IS NULL
 - [ ] JOIN
