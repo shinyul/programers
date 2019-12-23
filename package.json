@@ -4,6 +4,7 @@
   "description": "To improve develop skills",
   "main": "index.js",
   "scripts": {
+    "prepare": "bash scripts/prepare.sh",
     "jest": "jest"
   },
   "repository": {
