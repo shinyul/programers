@@ -7,9 +7,9 @@ To improve develop skills
 - [x] SELECT
 - [x] SUM, MAX, MIN
 - [x] GROUP BY
-- [ ] IS NULL
-- [ ] JOIN
-- [ ] String, Date
+- [x] IS NULL
+- [x] JOIN
+- [x] String, Date
 
 
 ## References
