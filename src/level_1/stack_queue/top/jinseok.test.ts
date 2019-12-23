@@ -1,4 +1,4 @@
-import solution = require('./jinseok');
+import solution from './jinseok';
 
 describe('각 탑의 송신을 수신하는 탑의 위치를 반환한다.', () => {
   it('탑이 [6, 9, 5, 7, 4] 이면, 수신되는 탑은 [0, 0, 2, 2, 4] 이다.', () => {

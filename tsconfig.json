@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "module": "esnext",
+    "moduleResolution": "node",
+    "noImplicitAny": true,
+    "removeComments": true,
+    "preserveConstEnums": true,
+    "sourceMap": true,
+    "downlevelIteration": true,
+    "experimentalDecorators": true,
+    "target": "es2015",
+    "esModuleInterop": true,
+    "lib": ["es2018", "dom"],
+    "typeRoots": ["node_modules/@types"],
+  }
+}
