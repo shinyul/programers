@@ -16,4 +16,4 @@ function solution(heights: number[]): number[] {
   return answer;
 }
 
-export = solution;
+export default solution;
