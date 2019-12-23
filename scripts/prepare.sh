@@ -1,3 +1,3 @@
 # /usr/bin/env bash
 
-cp scripts/hooks/* .git/hooks/
+cp -rf scripts/hooks/* .git/hooks/
