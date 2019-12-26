@@ -3,7 +3,7 @@ class Solution {
         int answer = n - lost.length;
 
         for ( int i = 0; i < reserve.length; i++ ) {
-            for ( int k=0; k < lost.length; k++ ) {
+            for ( int k = 0; k < lost.length; k++ ) {
                 if ( reserve[i] == lost[k] ) {
                     lost[k] = -1; 
                     reserve[i] = -1;
@@ -25,7 +25,7 @@ class Solution {
                     }
                 }
             }
-        } 
+        }
         return answer;
     }
 }
