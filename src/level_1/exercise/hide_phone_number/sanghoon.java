@@ -9,6 +9,6 @@ public class test {
 //	    return answer + phone_number.substring(maxSize, phone_number.length());
 		
         String answer = "********************";
-        return answer.substring(0,maxSize) + phone_number.substring(maxSize, phone_number.length());
+        return answer.substring( 0, maxSize ) + phone_number.substring( maxSize, phone_number.length() );
     }
 }
