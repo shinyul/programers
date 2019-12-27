@@ -12,7 +12,7 @@ public class test {
 //      return answer.substring( 0, maxSize ) + phone_number.substring( maxSize, phone_number.length() );
 
         char[] c = new char[ phone_number.length() - 4 ];
-		Arrays.fill( c, '*' );
+        Arrays.fill( c, '*' );
         return String.valueOf(c) + test.substring( test.length() - 4 );
     }
 }
