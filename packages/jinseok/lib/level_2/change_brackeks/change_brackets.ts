@@ -2,12 +2,11 @@ const START_BRACKET = '(';
 const END_BRACKET = ')';
 
 /**
- * 올바른 문자열인지 판단한다.
+ * '('로 시작하고, ')'로 끝나는지 판단한다.
  */
-export function isCorrect(text: string): boolean  {
-  if (!isCorrectedStartAndEnd(text)) return false;
-  return [...getMatchedText(text)].every((v: string) => isCorrectedStartAndEnd(v));
-};
+export function isCorrect(text: string): boolean {
+  return text.startsWith(START_BRACKET) && text.endsWith(END_BRACKET);
+}
 
 /**
  * '(' -> ')'으로, ')' -> '('로 변환한다.
@@ -21,7 +20,7 @@ export function revertCharacter (character: string): string {
  */
 export function* getMatchedText(text: string): Generator<string> {
   for (const [value] of recursive(text)) yield value;
-};
+}
 
 /**
  * 올바른 문자열을 가져온다.
@@ -34,14 +33,13 @@ function* getText(text: string): Generator {
       break;
     }
   }
-};
+}
 
 /**
  * 올바른 문자열로 변환한다.
  */
 export function parse(text: string): string {
   if (text === '') return '';
-  if (isCorrect(text)) return text;
 
   return [...getText(text)].join('');
 }
@@ -51,13 +49,6 @@ export function parse(text: string): string {
  */
 function changeText(text: string, rest: string): string {
   return `(${[...getText(rest)].join('')})${text.substring(1, text.length -1).replace(/\(|\)/g, revertCharacter)}`;
-}
-
-/**
- * '('로 시작하고, ')'로 끝나는지 판단한다.
- */
-function isCorrectedStartAndEnd(text: string): boolean {
-  return text.startsWith(START_BRACKET) && text.endsWith(END_BRACKET);
 }
 
 /**
@@ -72,7 +63,7 @@ function* recursive(text: string): Generator<string[]> {
     else count--;
 
     if (count === 0) {
-      yield [text.substring(pointer, i + 1) as string, text.substring(pointer, text.length)];
+      yield [text.substring(pointer, i + 1), text.substring(i + 1, text.length)];
       pointer = i + 1;
     }
   }

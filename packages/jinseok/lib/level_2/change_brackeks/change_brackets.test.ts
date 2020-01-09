@@ -13,12 +13,6 @@ describe('[2020카카오공채] 괄호 변환', () => {
       const result = isCorrect(text);
       expect(result).toBe(false);
     });
-
-    it('문자열 ()))((() 이면, false를 반환한다.', () => {
-      const text = '()))((()';
-      const result = isCorrect(text);
-      expect(result).toBe(false);
-    });
   });
 
   describe('균형잡힌 문자열을 가져올 수 있다.', () => {
@@ -34,7 +28,7 @@ describe('[2020카카오공채] 괄호 변환', () => {
     });
 
     it('잘못된 문자열을, 올바른 문자열로 변환하여 반환한다.', () => {
-      expect(parse('()')).toEqual('()');
+      expect(parse('()))((()')).toEqual('()(())()');
     });
   });
 });
