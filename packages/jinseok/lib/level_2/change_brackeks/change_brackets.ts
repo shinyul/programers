@@ -11,8 +11,8 @@ export function isCorrect(text: string): boolean {
 /**
  * '(' -> ')'으로, ')' -> '('로 변환한다.
  */
-export function revertCharacter (character: string): string {
-  return (character === START_BRACKET) ? END_BRACKET : START_BRACKET;
+export function revertCharacter(character: string): string {
+  return character === START_BRACKET ? END_BRACKET : START_BRACKET;
 }
 
 /**
@@ -48,7 +48,9 @@ export function parse(text: string): string {
  * 정확하지 않은 문자열을 변환한다.
  */
 function changeText(text: string, rest: string): string {
-  return `(${[...getText(rest)].join('')})${text.substring(1, text.length -1).replace(/\(|\)/g, revertCharacter)}`;
+  return `(${[...getText(rest)].join('')})${text
+    .substring(1, text.length - 1)
+    .replace(/\(|\)/g, revertCharacter)}`;
 }
 
 /**
@@ -59,8 +61,8 @@ function* recursive(text: string): Generator<string[]> {
   let pointer = 0;
 
   for (const [i, v] of text.split('').entries()) {
-    if (v === START_BRACKET) count++;
-    else count--;
+    if (v === START_BRACKET) count += 1;
+    else count += 1;
 
     if (count === 0) {
       yield [text.substring(pointer, i + 1), text.substring(i + 1, text.length)];

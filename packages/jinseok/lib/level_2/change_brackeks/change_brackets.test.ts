@@ -2,13 +2,13 @@ import { isCorrect, parse } from './change_brackets';
 
 describe('[2020카카오공채] 괄호 변환', () => {
   describe('올바른 가로 문자열인지 판단할 수 있다.', () => {
-    it('문자열 시작이 \'(\' 아니면, false를 반환한다.', () => {
+    it("문자열 시작이 '(' 아니면, false를 반환한다.", () => {
       const text = ')(';
       const result = isCorrect(text);
       expect(result).toBe(false);
     });
 
-    it('문자열 마지막이 \')\' 아니면, false를 반환한다.', () => {
+    it("문자열 마지막이 ')' 아니면, false를 반환한다.", () => {
       const text = '())(';
       const result = isCorrect(text);
       expect(result).toBe(false);
