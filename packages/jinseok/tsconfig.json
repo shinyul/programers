@@ -10,7 +10,7 @@
     "experimentalDecorators": true,
     "target": "es2015",
     "esModuleInterop": true,
-    "lib": ["es2018", "dom"],
+    "lib": ["es2018", "dom", "dom.iterable"],
     "typeRoots": ["node_modules/@types"],
   }
 }
